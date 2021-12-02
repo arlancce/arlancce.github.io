@@ -1,0 +1,212 @@
+// Fonts
+@font-face {
+    font-family: 'ProximaNova_bold';
+    src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova_regular';
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+input, button, a{
+    &:focus{
+        outline: none;
+    }
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.reg(){
+    font-family: 'ProximaNova_regular', sans-serif;
+}
+.bold(){
+    font-family: 'ProximaNova_bold', sans-serif;
+}
+
+body{
+    .reg();
+}
+
+// Colors
+@btn-color: #feb404;
+@icons-color: #46b814;
+@text-color: #1a1820;
+@danger-color: #ff0000;
+@border-input: #dddddd;
+@border-input-2: rgb(212, 212, 212);
+
+// Basic settings
+html{
+    font-size: 10px;
+}
+
+// Typography
+section{
+    padding: 10rem 0;
+}
+
+
+// main
+main{
+    padding: 3rem 0 5rem; 
+    background: white url(../img/main-bg.png) center center no-repeat;
+    background-size: cover;
+}
+
+.button{
+    background-color: @btn-color;
+    color:white;
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 0.2s;
+    &:hover{
+        cursor: pointer;
+        background-color: darken(@btn-color, 5%);
+    }
+}
+
+.phone-link{
+    display: inline-block;
+    color: @text-color;
+    font-weight: 900;
+    font-size: 1.8rem;
+    .bold();
+    height: 70px;
+    line-height: 7rem;
+    text-align: left;
+}
+
+.header{
+    height: 70px;
+}
+
+.wrap{
+    display: table;
+    width: 100%;
+    height: 7rem;
+    &-block{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+    }
+}
+// main
+.main-content{
+    margin-top: 10rem;
+    
+    // main header
+    h1{
+        font-size: 4rem;
+        text-transform: uppercase;
+        .bold();
+        margin-bottom: 4rem;
+        line-height: 1.45;
+    }
+    //main subtitle
+    p{
+        font-size: 2.4rem;
+        margin-bottom: 4rem;
+    } 
+    // Green label
+    span{
+        display: inline-block;
+        padding: 3rem 5rem;
+        background-color: @icons-color;
+        font-size: 1.8rem;
+        color: white;
+        text-align: center;
+        // 300 rubles
+        strong{
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+    }
+    &-trigger{
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        display: block;
+        margin-top: 4rem;
+        .bold();
+    }
+    // Main format
+    &-form{
+        padding: 4rem 5rem;
+        background-color: white;
+        text-align: center;
+        // margin-top: 400px;
+        h2{
+            font-size: 1.7rem;
+            strong{
+                font-size: 1.9rem;
+            }
+            margin-bottom: 3.9rem;
+        }
+        // Form input
+        &-input{
+            margin: 1.3rem 0;
+            border: 2px solid @border-input-2;
+            width: 100%;
+            padding: 1.5rem;
+
+        }
+        //Labels for input
+        label{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            padding: 0.5rem;
+            background-color: white;
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+        // Form button
+        button{
+            font-size: 1.6rem;
+            width: 100%;
+            height: 5rem;
+        }
+
+        // Small under button
+        small{
+            display: block;
+            margin-top: 1.1rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media(max-width: 991px){
+    .main-title{
+        text-align: center;
+        padding-bottom: 13rem;
+    }
+    .main-content-form{
+        text-align: center;
+    }
+}
+
+
+@media(max-width: 600px){
+    .logo{
+       text-align: center;
+    }
+    .main-title h1{
+        font-size: 30px;
+    }
+}
